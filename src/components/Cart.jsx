@@ -14,21 +14,36 @@ export default function Cart({ cart, updateQty, removeItem }) {
         <>
           {cart.map((item) => (
             <div key={item.id} className="cart-item">
-              <span>{item.title}</span>
+              <div className="cart-title">{item.title}</div>
 
-              <input
-                type="number"
-                min="1"
-                max={item.stock}
-                value={item.qty}
-                onChange={(e) =>
-                  updateQty(item.id, Number(e.target.value))
-                }
-              />
+              <div className="qty-controls">
+                <button
+                  className="qty-btn"
+                  onClick={() => updateQty(item.id, item.qty - 1)}
+                  disabled={item.qty <= 1}
+                >
+                  −
+                </button>
 
-              <button onClick={() => removeItem(item.id)}>
-                Remove
-              </button>
+                <span className="qty-value">{item.qty}</span>
+
+                <button
+                  className="qty-btn"
+                  onClick={() => updateQty(item.id, item.qty + 1)}
+                  disabled={item.qty >= item.stock}
+                >
+                  +
+                </button>
+
+                <button
+                  className="remove-btn"
+                  onClick={() => removeItem(item.id)}
+                >
+                  Remove
+                </button>
+                
+              </div>
+
             </div>
           ))}
 
@@ -37,9 +52,7 @@ export default function Cart({ cart, updateQty, removeItem }) {
           <p><strong>Total Items:</strong> {cart.length}</p>
           <p><strong>Total Price:</strong> ₹{totalPrice.toFixed(2)}</p>
 
-          <button className="checkout-btn">
-            Checkout
-          </button>
+          <button className="checkout-btn">Checkout</button>
         </>
       )}
     </div>
