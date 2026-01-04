@@ -28,7 +28,6 @@ component-based design, state management, and clean UI handling.
 
 ---
 
-```md
 ## 📦 Project Structure
 
 ```text
