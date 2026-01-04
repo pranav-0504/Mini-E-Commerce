@@ -28,6 +28,7 @@ component-based design, state management, and clean UI handling.
 
 ---
 
+```md
 ## 📦 Project Structure
 
 ```text
@@ -42,6 +43,8 @@ src/
 ├── App.jsx
 └── styles.css
 
+```
+
 ---
 
 ## 🛠️ Setup Instructions
@@ -52,3 +55,4 @@ cd Mini-E-Commerce
 npm install
 npm run dev
 Then Open browser at: http://localhost:5173
+
