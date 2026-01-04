@@ -30,23 +30,25 @@ component-based design, state management, and clean UI handling.
 
 ## 📦 Project Structure
 
+```text
 src/
 ├── components/
-│ ├── ProductList.jsx
-│ ├── ProductCard.jsx
-│ ├── Cart.jsx
-│ └── Filters.jsx
+│   ├── ProductList.jsx
+│   ├── ProductCard.jsx
+│   ├── Cart.jsx
+│   └── Filters.jsx
 ├── data/
-│ └── products.js
+│   └── products.js
 ├── App.jsx
 └── styles.css
 
 ---
 
-## FINAL STATUS (HONEST REVIEW)
+## 🛠️ Setup Instructions
 
-✔ Functional requirements – DONE  
-✔ React fundamentals – CLEAR  
-✔ State management – GOOD  
-✔ Bonus (localStorage) – DONE  
-✔ GitHub + README – DONE  
+```bash
+git clone https://github.com/pranav-0504/Mini-E-Commerce.git
+cd Mini-E-Commerce
+npm install
+npm run dev
+Then Open browser at: http://localhost:5173
