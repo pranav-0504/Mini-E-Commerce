@@ -46,10 +46,12 @@ h1 {
 /* FLEX so cart width change doesn't break grid */
 
 .layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 300px; /* products | cart */
   gap: 24px;
-  align-items: flex-start;
+  align-items: start;
 }
+
 
 .products-wrapper {
   flex: 1;

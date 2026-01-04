@@ -36,6 +36,10 @@ export default function Cart({ cart, updateQty, removeItem }) {
 
           <p><strong>Total Items:</strong> {cart.length}</p>
           <p><strong>Total Price:</strong> ₹{totalPrice.toFixed(2)}</p>
+
+          <button className="checkout-btn">
+            Checkout
+          </button>
         </>
       )}
     </div>
